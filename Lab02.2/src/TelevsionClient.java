@@ -1,13 +1,13 @@
-public class TelevsionsClient {
+public class TelevsionClient {
 
   public static void main(String[] args) {
 
-    Televisions tv1 = new Televisions();
+    Television tv1 = new Television();
     tv1.brand = "Zenith";
     tv1.volume = 25;
 
 
-    Televisions tv2 = new Televisions();
+    Television tv2 = new Television();
     tv2.brand = "RCA";
     tv2.volume = 18;
 
