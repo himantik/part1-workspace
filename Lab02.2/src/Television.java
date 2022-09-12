@@ -9,13 +9,14 @@ public class Television {
 
   private String brand;
   private int volume;
-
+  private DisplayType display = DisplayType.LED
   public Television(){
     instanceCount++;
   }
   public Television(String brand){
     this();
     setBrand();
+
   }
 
 
@@ -47,17 +48,18 @@ public class Television {
 
   public void setVolume(int volume) {
     if (volume < MIN_VOLUME || volume > MAX_VOLUME) {
-      System.out.println(" %d is invalud; volume must be %d and %d (inclusive)." volume, MIN_VOLUME, MAX_VOLUME");
+      System.out.println(" %d is invalud; volume must be %d and %d (inclusive)."volume, MIN_VOLUME, MAX_VOLUME");
     } else {
       this.volume = volume;
     }
+
   }
   private boolean verifyInternetConnection(){
     return true;
   }
 
   public String toString(){
-    return "Television brank" + brand + "Volume " + volume;
+    return "Television brand=" + brand + "Volume " + volume;
   }
 
 }

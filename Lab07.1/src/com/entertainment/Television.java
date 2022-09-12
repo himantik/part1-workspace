@@ -33,7 +33,6 @@ public class Television {
   }
 
   public void turnOn() {
-    boolean isConnected = verifyInternetConnection();
 
     System.out.println("The  " + brand + " television is on, with a volume of " + volume);
   }
@@ -82,7 +81,7 @@ public class Television {
   }
 
   public String toString() {
-    return "com.entertainment.Television brand=" + brand + "Volume " + volume;
+    return "com.entertainment.Television brand=" + brand + " Volume " + volume;
   }
 
 }

@@ -16,7 +16,7 @@
  * GOAL:
  *  Create an instance of Television with the specifications (values) provided by the user.
  */
-class TelevisionClientArgs {
+public class TelevisionClientArgs {
 
     public static void main(String[] args) {
         // must first check for the presence of your (required) 3 arguments
