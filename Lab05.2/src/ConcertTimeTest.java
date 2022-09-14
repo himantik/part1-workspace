@@ -13,7 +13,7 @@ class ConcertTimeTest {
 
   public static void main(String[] args) {
     listAvailableZoneIds();
-    // testLiveConcert();
+     testLiveConcert();
   }
 
   /*
@@ -37,6 +37,12 @@ class ConcertTimeTest {
    * RESULT:
    */
   public static void testLiveConcert() {
+
+    ZoneId toronto = ZoneId.of("America/Toronto");
+    ZoneId perth = ZoneId.of("Australia/Perth");
+    ZonedDateTime concertInToronto = ZonedDateTime.of(2022, 9, 13, 14, 0, 0, 0, toronto);
     // TODO
+    ZonedDateTime concertInPerth = concertInToronto.withZoneSameInstant(perth);
+    System.out.println(concertInPerth);
   }
 }
