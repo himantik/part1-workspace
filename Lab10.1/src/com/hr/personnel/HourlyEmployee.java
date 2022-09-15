@@ -11,9 +11,11 @@ package com.hr.personnel;
 import java.time.LocalDate;
 
 public class HourlyEmployee extends Employee {
+    public static double  FEDERAL_MINIMUM_WAGE = 15.0;
     // fields
     private double rate;
     private double hours;
+
 
     // constructors
     public HourlyEmployee() {
@@ -47,6 +49,12 @@ public class HourlyEmployee extends Employee {
     }
 
     public void setRate(double rate) {
+
+        if (rate < FEDERAL_MINIMUM_WAGE) {
+            throw new IllegalArgumentException(String.format())
+                System.out.println("Can you throw an Exception" + rate + "At this wage , "  +
+                    FEDERAL_MINIMUM_WAGE);
+        } else
         this.rate = rate;
     }
 
