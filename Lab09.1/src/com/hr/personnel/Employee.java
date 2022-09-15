@@ -42,10 +42,7 @@ public abstract class Employee {
   }
 
   public abstract void pay();
-  {
-    //System.out.printf("%s is paid... somehow%n" + getName());
 
-  }
 
   // accessor methods
   public String getName() {

@@ -60,34 +60,33 @@ public class Department {
     for (int i = 0; i < currentIndex; i++) {
       employees[i].pay();
     }
-  }
 
-  // helper method to add an Employee to the array
-  public void addEmployee(Employee emp) {
+    // helper method to add an Employee to the array
+
+  }
+  public void addEmployee (Employee emp){
     employees[currentIndex++] = emp;
   }
 
   // accessor methods
 
-
-  public void setName(String name) {
+  public void setName (String name){
     this.name = name;
   }
+  public String getName () {
+    return name;
+  }
 
-  public String getLocation() {
+  public String getLocation () {
     return location;
   }
 
-  public void setLocation(String location) {
+  public void setLocation (String location){
     this.location = location;
   }
 
-  public String toString() {
+  public String toString () {
     return "Department: name=" + getName() + ", location=" + getLocation();
   }
-
-
-  public String getName() {
-    return name;
-  }
 }
+

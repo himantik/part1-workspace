@@ -1,8 +1,9 @@
 package com.hr.personnel;
 
+import gov.irs.TaxPayer;
 import java.time.LocalDate;
 
-public class HourlyEmployee extends Employee {
+public class HourlyEmployee extends Employee implements TaxPayer {
 
   private double rate;
   private double hours;
@@ -22,6 +23,11 @@ public class HourlyEmployee extends Employee {
   public void pay(){
     System.out.printf("%s is paid hourly, for a total of % .2f %n"
     , getName(), getHours() * getRate());
+
+  }
+  public void payTaxes(){
+
+
 
   }
 
