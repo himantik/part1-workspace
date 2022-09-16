@@ -32,8 +32,8 @@ public class Department {
   // fields
   private String name;
   private String location;
-  private Collection<Employee> employees = new ArrayList<>();
-  private int currentIndex = 0;  // for dealing with the array
+  private final Collection<Employee> employees = new ArrayList<>();
+
 
   // constructors
   public Department() {
@@ -61,35 +61,37 @@ public class Department {
 
   public void payEmployees() {
     for (Employee emp : employees) {
-     emp.pay();
+      emp.pay();
     }
 
     // helper method to add an Employee to the array
 
   }
-  public void addEmployee (Employee emp){
+
+  public void addEmployee(Employee emp) {
 
     employees.add(emp);
   }
 
   // accessor methods
 
-  public void setName (String name){
+  public void setName(String name) {
     this.name = name;
   }
-  public String getName () {
+
+  public String getName() {
     return name;
   }
 
-  public String getLocation () {
+  public String getLocation() {
     return location;
   }
 
-  public void setLocation (String location){
+  public void setLocation(String location) {
     this.location = location;
   }
 
-  public String toString () {
+  public String toString() {
     return "Department: name=" + getName() + ", location=" + getLocation();
   }
 }
