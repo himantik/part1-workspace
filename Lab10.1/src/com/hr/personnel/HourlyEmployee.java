@@ -8,6 +8,7 @@
 
 package com.hr.personnel;
 
+import gov.irs.IllegalWageException;
 import java.time.LocalDate;
 
 public class HourlyEmployee extends Employee {
@@ -48,12 +49,12 @@ public class HourlyEmployee extends Employee {
         return rate;
     }
 
-    public void setRate(double rate) {
+    public void setRate(double rate) throws IllegalWageException {
 
         if (rate < FEDERAL_MINIMUM_WAGE) {
-            throw new IllegalArgumentException(String.format())
-                System.out.println("Can you throw an Exception" + rate + "At this wage , "  +
-                    FEDERAL_MINIMUM_WAGE);
+             throw new   IllegalWageException(
+                 String.format("Illegal minimum wage: %,.2f. Federal minimum wage is %.2f%n", rate, FEDERAL_MINIMUM_WAGE));
+
         } else
         this.rate = rate;
     }
